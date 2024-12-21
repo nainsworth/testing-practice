@@ -1,17 +1,7 @@
-const add = (a, b) => {
-  return a + b;
-};
-
-const subtract = (a, b) => {
-  return a - b;
-};
-
-const divide = (a, b) => {
-  return a / b;
-};
-
-const multiply = (a, b) => {
-  return a * b;
-};
-
-module.exports = add, subtract, divide, multiply;
+const calculator = {
+  add: (a, b) => a + b,
+  sub: (a, b) => a - b,
+  div: (a, b) => a / b,
+  mul: (a, b) => a * b,
+}
+module.exports = calculator;

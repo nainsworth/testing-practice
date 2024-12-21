@@ -12,30 +12,25 @@ test("reverse string", () => {
   expect(reverseString("Reverse this string")).toBe("gnirts siht esreveR");
 });
 
-// Calculator Add Test
-const add = require("./js/calculator");
+// Calculator Test
+const calculator = require("./js/calculator");
 
+// Add Test
 test("adds two numbers", () => {
-  expect(add(1, 2)).toBe(3);
+  expect(calculator.add(1, 2)).toEqual(3);
 });
 
-// Calculator Subtract Test
-const subtract = require("./js/calculator");
-
+// Subtract Test
 test("subtracts two numbers", () => {
-  expect(subtract(5, 3)).toBe(8);
+  expect(calculator.sub(5, 3)).toEqual(2);
 });
 
-// Calculator Divide Test
-const divide = require("./js/calculator");
-
+// Divide Test
 test("divides two numbers", () => {
-  expect(divide(8, 2)).toBe(4);
+  expect(calculator.div(8, 2)).toEqual(4);
 });
 
-// Calculator Multiply Test
-const multiply = require("./js/calculator");
-
+// Multiply Test
 test("multiply two numbers", () => {
-  expect(multiply(5, 2)).toBe(10);
+  expect(calculator.mul(5, 2)).toEqual(10);
 });
