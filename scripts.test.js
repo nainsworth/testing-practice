@@ -57,3 +57,15 @@ test("tests a mix of capital letters", () => {
 test("tests non-alphabet characters", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+// === Caesar Cipher Test ===
+const analyzeArray = require("./js/analyze");
+
+test("analyze an array of numbers", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toMatchObject({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
