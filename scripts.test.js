@@ -1,18 +1,18 @@
-// Capitalize Test
+// === Capitalize Test ===
 const capitalize = require("./js/capitalize");
 
 test("capitalizes string", () => {
   expect(capitalize("Capitalize this string")).toBe("CAPITALIZE THIS STRING");
 });
 
-// Reverse String Test
+// === Reverse String Test ===
 const reverseString = require("./js/reverse");
 
 test("reverse string", () => {
   expect(reverseString("Reverse this string")).toBe("gnirts siht esreveR");
 });
 
-// Calculator Test
+// === Calculator Test ===
 const calculator = require("./js/calculator");
 
 // Add Test
@@ -33,4 +33,27 @@ test("divides two numbers", () => {
 // Multiply Test
 test("multiply two numbers", () => {
   expect(calculator.mul(5, 2)).toEqual(10);
+});
+
+// === Caesar Cipher Test ===
+const caesarCipher = require("./js/cipher");
+
+// Shift test
+test("character shift test by 3", () => {
+  expect(caesarCipher("abc", 3)).toBe("def");
+});
+
+// Alphabet wrapping test
+test('wraps alphabet and starts over at "a"', () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+});
+
+// Capital letter test
+test("tests a mix of capital letters", () => {
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});
+
+// Non-alphabet character test
+test("tests non-alphabet characters", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
